@@ -11,6 +11,10 @@ ENV PYTHON_VERSION=3.5 \
     LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8 \
     PIP_NO_CACHE_DIR=off
+    BASH_ENV=/usr/local/bin/scl_enable \
+    ENV=/usr/local/bin/scl_enable \
+    PROMPT_COMMAND=". /usr/local/bin/scl_enable"
+
 
 ENV SUMMARY="Jenkins slave for using with Python based applications or tools in a Jenkins build process/pipeline." \
     DESCRIPTION="Python $PYTHON_VERSION available as docker container is a base platform for \
