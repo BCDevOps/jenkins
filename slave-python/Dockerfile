@@ -32,6 +32,8 @@ LABEL summary="$SUMMARY" \
       version="3.5" \
       release="1"
 
+COPY contrib/bin/scl_enable /usr/local/bin/scl_enable
+
 # We need to call 2 (!) yum commands before being able to enable repositories properly
 # This is a workaround for https://bugzilla.redhat.com/show_bug.cgi?id=1479388
 RUN yum repolist > /dev/null && \
